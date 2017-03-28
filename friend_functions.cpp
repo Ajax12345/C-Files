@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
-
+//James Petullo
+//Dr. Brown
 
 class Rational
 {
@@ -17,11 +18,12 @@ public:
     if (sign == '+')
     {
       //cout << numerator<< slash << denominator<< endl;
-      cout << numerator << endl<< "--"<< endl<<denominator<< endl<< endl;
+      cout << numerator << "/"<<denominator<< endl;
     }
     else
     {
-      cout << sign<<numerator<<endl<< "--"<<endl<<denominator << endl;
+
+      cout << sign<<abs(numerator)<< "/"<<abs(denominator) << endl;
     }
   }
   friend bool Equivalent(Rational fract1, Rational fract2);
@@ -48,7 +50,7 @@ private:
 bool Equivalent(Rational fract1, Rational fract2)
 {
 
-  if (fract1.numerator*fract2.denominator == fract2.denominator*fract2.numerator)
+  if (fract2.numerator*fract1.denominator == fract2.denominator*fract1.numerator)
   {
     return true;
   }
